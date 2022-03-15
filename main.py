@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setWindowTitle('UTIL Manager')
-        self.setWindowIcon(QtGui.QIcon(":/icons/assets/icons/out/airplay.png"))
+        self.setWindowIcon(QtGui.QIcon("assets/img/icon.png"))
         
         # Config Shadow
         self.shadow = QGraphicsDropShadowEffect(self)

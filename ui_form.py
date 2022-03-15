@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'formCaFGGX.ui'
+## Form generated from reading UI file 'formamGVDr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.3
 ##
@@ -1361,7 +1361,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.menu_button.setText(QCoreApplication.translate("MainWindow", u"Menu", None))
         self.header_icon.setText("")
-        self.header_text.setText(QCoreApplication.translate("MainWindow", u"SYS MANAGER", None))
+        self.header_text.setText(QCoreApplication.translate("MainWindow", u"Monitor Wizzard", None))
         self.minimize_window_btn.setText("")
         self.maximize_window_btn.setText("")
         self.close_window_btn.setText("")
@@ -1535,7 +1535,7 @@ class Ui_MainWindow(object):
         self.yt_btn.setText(QCoreApplication.translate("MainWindow", u"YOUTUBE", None))
         self.project_btn.setText(QCoreApplication.translate("MainWindow", u"PROJECTS", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>App<br/>Designed And<br/>Developed By<br>&#169; S3R43o3</p></body></html>", None))
-        self.footer_text.setText(QCoreApplication.translate("MainWindow", u"Version 0.8.4 | all Rights reserved 2021 - 2022 \u00a9 S3R43o3", None))
+        self.footer_text.setText(QCoreApplication.translate("MainWindow", u"Version 1.0.3 | all Rights reserved 2021 - 2022 \u00a9 S3R43o3", None))
         self.footer_help_btn.setText("")
     # retranslateUi
 
