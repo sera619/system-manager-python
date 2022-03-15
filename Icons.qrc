@@ -287,6 +287,10 @@
     <file>assets/icons/out/zoom-in.png</file>
     <file>assets/icons/out/zoom-out.png</file>
   </qresource>
+  <qresource prefix="img">
+    <file>0x41.png</file>
+    <file>game_logo_colored.png</file>
+  </qresource>
   <qresource prefix="font">
     <file>AANOTHERTAG.TTF</file>
   </qresource>

@@ -1,17 +1,19 @@
-import sys
-import traceback
+import sys, traceback, os, platform, shutil, psutil, datetime, webbrowser
+
 from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect, QSizeGrip,QPushButton, QProgressBar, QTableWidgetItem, QTableWidget
 from PySide6.QtCore import *
 from PySide6 import QtCore, QtGui
 from PySide6 import *
 
-from qt_material import *
-import os, platform, shutil, psutil, datetime
 from time import time, sleep
 from multiprocessing import cpu_count
 ######################################## PRE-CONFIG #######################################
 # UI IMPORTS
 from ui_form import Ui_MainWindow
+from models import Styles
+
+
+from qt_material import *
 
 # GLOBALS 
 plattform = {
@@ -22,7 +24,7 @@ plattform = {
     'wind32': 'Windows'
 }
 
-#############################################################################################
+
 
 #################################### WORKER CONFIG ##########################################
 
@@ -57,6 +59,8 @@ class Worker(QRunnable):
             self.signals.finished.emit()
 
 
+################################# MAINWINDOW ######################################
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow,self).__init__()
@@ -66,7 +70,7 @@ class MainWindow(QMainWindow):
 
         
         # Window Styling
-        apply_stylesheet(app, theme="dark_cyan.xml")  
+        apply_stylesheet(app, theme="dark_red.xml")  
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setWindowTitle('UTIL Manager')
@@ -93,6 +97,31 @@ class MainWindow(QMainWindow):
         self.ui.display_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.system_monitor))
         self.ui.resource_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.activities))
         self.ui.network_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.networks))
+        self.ui.project_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.projects_site))
+    
+    
+        # CONTACT BUTTONS
+        self.ui.project_btn.setStyleSheet(Styles.CONTACTBUTTON)
+        self.ui.menu_button.setStyleSheet(Styles.CONTACTBUTTON)
+        self.ui.yt_btn.setStyleSheet(Styles.CONTACTBUTTON)
+        self.ui.codepen_btn.setStyleSheet(Styles.CONTACTBUTTON)
+        self.ui.git_btn.setStyleSheet(Styles.CONTACTBUTTON)
+        self.ui.hackzor_btn.setStyleSheet(Styles.CONTACTBUTTON)
+        self.ui.foxtale_btn.setStyleSheet(Styles.CONTACTBUTTON)
+        
+   
+        self.ui.git_btn.clicked.connect(lambda: webbrowser.open("https://github.com/sera619"))
+        self.ui.yt_btn.clicked.connect(lambda: webbrowser.open("https://www.youtube.com/channel/UCJLXwZV5Kk4XRF6TSY_iPgQ"))
+        self.ui.codepen_btn.clicked.connect(lambda: webbrowser.open("https://codepen.io/sera619"))
+        self.ui.foxtale_btn.clicked.connect(lambda: webbrowser.open("https://sera619.github.io/FOX-TALE-Alpha/"))
+        self.ui.hackzor_btn.clicked.connect(lambda: webbrowser.open("http://www.hackzor.de"))
+        
+        
+        
+        for btn in self.ui.centralwidget.findChildren(QProgressBar):
+            btn.setStyleSheet(Styles.PROGRESS)
+    
+    
     
         QSizeGrip(self.ui.size_grip)
         # Progressbar reset
@@ -115,7 +144,7 @@ class MainWindow(QMainWindow):
         self.ui.header_frame.mouseMoveEvent = moveWindow
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
 
-        for w in self.ui.menu_frame.findChildren(QPushButton):
+        for w in self.ui.main_menu_con.findChildren(QPushButton):
             w.clicked.connect(self.applyButtonStyle)
             
      
@@ -127,6 +156,8 @@ class MainWindow(QMainWindow):
         self.storage()
        # self.sensors()
         self.networks()
+        
+        self.ui.stackedWidget.CurrentWidget=self.ui.system_info
     ############################### PRE Config END ####################################
     
     def psutilThreat(self):
@@ -166,15 +197,21 @@ class MainWindow(QMainWindow):
         self.clickPosition = event.globalPos()
     
     
+    def contactAnimation(self):
+        pass
+    
+    
     # Menuslider 
     def slideLeftMenu(self):
-        width = self.ui.menu_slider.width()
-        if width == 0:
-            newWidth = 75
+        width = self.ui.main_menu_con.width()
+        if width == 45:
+            newWidth = 145
+            
             
         else:
-            newWidth = 0
-        self.animation = QPropertyAnimation(self.ui.menu_slider, b"minimumWidth")
+            newWidth = 45
+            
+        self.animation = QPropertyAnimation(self.ui.main_menu_con, b"minimumWidth")
         self.animation.setDuration(250)
         self.animation.setStartValue(width)
         self.animation.setEndValue(newWidth)
@@ -193,7 +230,7 @@ class MainWindow(QMainWindow):
     
     
     def applyButtonStyle(self):
-        for w in self.ui.menu_frame.findChildren(QPushButton):
+        for w in self.ui.main_menu_con.findChildren(QPushButton):
             if w.objectName() != self.sender().objectName():
 
                 w.setStyleSheet("border-bottom: none;")
@@ -283,7 +320,7 @@ class MainWindow(QMainWindow):
             
             ramUsages = 1.0
             ramUsages = str(psutil.virtual_memory()[2]) + ' %'
-            self.ui.ram_used_text.setText(str("{:.4f}".format(ramUsages) + ' GB'))
+            self.ui.ram_used_text.setText(str("{:.4f}".format(ramUsages)) + ' GB')
             self.ui.ram_use_bar.setValue(availRam)
             self.ui.ram_use_bar.setValue(ramUsages)
             #print(ramUsages)

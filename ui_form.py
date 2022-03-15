@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'formKaHVmQ.ui'
+## Form generated from reading UI file 'formCaFGGX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.3
 ##
@@ -15,11 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QButtonGroup, QFrame, QGridLayout,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QMainWindow, QProgressBar, QPushButton, QScrollArea,
-    QSizePolicy, QStackedWidget, QTableWidget, QTableWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
+    QHeaderView, QLabel, QLineEdit, QMainWindow,
+    QProgressBar, QPushButton, QScrollArea, QSizePolicy,
+    QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
 import Icons_rc
 
 class Ui_MainWindow(object):
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.menu_button.setAutoFillBackground(False)
         self.menu_button.setStyleSheet(u"color: rgb(0, 0, 0);")
         icon = QIcon()
-        icon.addFile(u":/icons/assets/icons/out/align-left.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons_svg/assets/icons/svg/align-left.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.menu_button.setIcon(icon)
         self.menu_button.setIconSize(QSize(32, 32))
 
@@ -103,6 +103,7 @@ class Ui_MainWindow(object):
         font2.setPointSize(50)
         font2.setBold(False)
         font2.setItalic(False)
+        font2.setKerning(True)
         self.header_text.setFont(font2)
         self.header_text.setStyleSheet(u"font: 50pt \"a Another Tag\";\n"
 "color: rgb(2, 17, 31);")
@@ -171,201 +172,137 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.main_menu_con = QFrame(self.main_frame)
         self.main_menu_con.setObjectName(u"main_menu_con")
-        sizePolicy.setHeightForWidth(self.main_menu_con.sizePolicy().hasHeightForWidth())
-        self.main_menu_con.setSizePolicy(sizePolicy)
-        self.main_menu_con.setStyleSheet(u"background-color: rgb(0, 170, 255);")
-        self.main_menu_con.setFrameShape(QFrame.StyledPanel)
-        self.main_menu_con.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_8 = QHBoxLayout(self.main_menu_con)
-        self.horizontalLayout_8.setSpacing(2)
-        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.horizontalLayout_8.setContentsMargins(5, 0, 0, 0)
-        self.menu_frame = QFrame(self.main_menu_con)
-        self.menu_frame.setObjectName(u"menu_frame")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.menu_frame.sizePolicy().hasHeightForWidth())
-        self.menu_frame.setSizePolicy(sizePolicy1)
-        self.menu_frame.setMinimumSize(QSize(40, 0))
-        self.menu_frame.setMaximumSize(QSize(200, 16777215))
-        self.verticalLayout_20 = QVBoxLayout(self.menu_frame)
-        self.verticalLayout_20.setSpacing(0)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.cpu_button = QPushButton(self.menu_frame)
-        self.cpu_button.setObjectName(u"cpu_button")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/assets/icons/out/cpu.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.cpu_button.setIcon(icon4)
-        self.cpu_button.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_20.addWidget(self.cpu_button)
-
-        self.harddrive_button = QPushButton(self.menu_frame)
-        self.harddrive_button.setObjectName(u"harddrive_button")
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/assets/icons/out/database.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.harddrive_button.setIcon(icon5)
-        self.harddrive_button.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_20.addWidget(self.harddrive_button)
-
-        self.power_button = QPushButton(self.menu_frame)
-        self.power_button.setObjectName(u"power_button")
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/assets/icons/out/battery-charging.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.power_button.setIcon(icon6)
-        self.power_button.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_20.addWidget(self.power_button)
-
-        self.resource_button = QPushButton(self.menu_frame)
-        self.resource_button.setObjectName(u"resource_button")
-        icon7 = QIcon()
-        icon7.addFile(u":/icons/assets/icons/out/activity.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.resource_button.setIcon(icon7)
-        self.resource_button.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_20.addWidget(self.resource_button)
-
-        self.display_button = QPushButton(self.menu_frame)
-        self.display_button.setObjectName(u"display_button")
-        self.display_button.setMinimumSize(QSize(40, 0))
-        icon8 = QIcon()
-        icon8.addFile(u":/icons/assets/icons/out/monitor.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.display_button.setIcon(icon8)
-        self.display_button.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_20.addWidget(self.display_button)
-
-        self.network_button = QPushButton(self.menu_frame)
-        self.network_button.setObjectName(u"network_button")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/assets/icons/out/wifi.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.network_button.setIcon(icon9)
-        self.network_button.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_20.addWidget(self.network_button)
-
-
-        self.horizontalLayout_8.addWidget(self.menu_frame, 0, Qt.AlignLeft)
-
-        self.menu_slider = QFrame(self.main_menu_con)
-        self.menu_slider.setObjectName(u"menu_slider")
-        sizePolicy1.setHeightForWidth(self.menu_slider.sizePolicy().hasHeightForWidth())
-        self.menu_slider.setSizePolicy(sizePolicy1)
-        self.menu_slider.setMinimumSize(QSize(0, 0))
-        self.menu_slider.setMaximumSize(QSize(0, 600))
-        font4 = QFont()
-        font4.setPointSize(14)
-        font4.setBold(True)
-        self.menu_slider.setFont(font4)
-        self.menu_slider.setFrameShape(QFrame.StyledPanel)
-        self.menu_slider.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_19 = QVBoxLayout(self.menu_slider)
-        self.verticalLayout_19.setSpacing(35)
-        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
-        self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
-        self.label_3 = QLabel(self.menu_slider)
-        self.label_3.setObjectName(u"label_3")
-        sizePolicy1.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
-        self.label_3.setSizePolicy(sizePolicy1)
-        self.label_3.setMinimumSize(QSize(0, 0))
-        self.label_3.setMaximumSize(QSize(0, 0))
-        self.label_3.setSizeIncrement(QSize(200, 204))
-        self.label_3.setBaseSize(QSize(0, 0))
-        font5 = QFont()
-        font5.setPointSize(12)
-        font5.setBold(False)
-        font5.setKerning(True)
-        self.label_3.setFont(font5)
-        self.label_3.setScaledContents(False)
-        self.label_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.verticalLayout_19.addWidget(self.label_3)
-
-        self.label_58 = QLabel(self.menu_slider)
-        self.label_58.setObjectName(u"label_58")
-        font6 = QFont()
-        font6.setBold(True)
-        self.label_58.setFont(font6)
-
-        self.verticalLayout_19.addWidget(self.label_58)
-
-        self.label_5 = QLabel(self.menu_slider)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setMinimumSize(QSize(0, 0))
-        self.label_5.setMaximumSize(QSize(16777215, 16777215))
-        self.label_5.setSizeIncrement(QSize(200, 200))
-        self.label_5.setBaseSize(QSize(200, 200))
-        font7 = QFont()
-        font7.setPointSize(12)
-        font7.setBold(True)
-        font7.setKerning(True)
-        self.label_5.setFont(font7)
-        self.label_5.setScaledContents(False)
-
-        self.verticalLayout_19.addWidget(self.label_5)
-
-        self.label_4 = QLabel(self.menu_slider)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setMinimumSize(QSize(0, 0))
-        self.label_4.setMaximumSize(QSize(16777215, 16777215))
-        self.label_4.setSizeIncrement(QSize(200, 200))
-        self.label_4.setBaseSize(QSize(200, 200))
-        self.label_4.setFont(font7)
-        self.label_4.setScaledContents(False)
-
-        self.verticalLayout_19.addWidget(self.label_4)
-
-        self.label_7 = QLabel(self.menu_slider)
+        sizePolicy1.setHeightForWidth(self.main_menu_con.sizePolicy().hasHeightForWidth())
+        self.main_menu_con.setSizePolicy(sizePolicy1)
+        self.main_menu_con.setMinimumSize(QSize(45, 0))
+        self.main_menu_con.setMaximumSize(QSize(0, 16777215))
+        self.main_menu_con.setStyleSheet(u"background-color: rgb(0, 170, 255);")
+        self.main_menu_con.setFrameShape(QFrame.NoFrame)
+        self.main_menu_con.setFrameShadow(QFrame.Plain)
+        self.gridLayout = QGridLayout(self.main_menu_con)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setHorizontalSpacing(35)
+        self.gridLayout.setVerticalSpacing(5)
+        self.gridLayout.setContentsMargins(4, 0, 10, 0)
+        self.label_7 = QLabel(self.main_menu_con)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setMinimumSize(QSize(0, 0))
-        self.label_7.setMaximumSize(QSize(16777215, 16777215))
-        self.label_7.setSizeIncrement(QSize(200, 200))
-        self.label_7.setBaseSize(QSize(200, 200))
-        self.label_7.setFont(font7)
-        self.label_7.setScaledContents(False)
+        font4 = QFont()
+        font4.setBold(True)
+        self.label_7.setFont(font4)
 
-        self.verticalLayout_19.addWidget(self.label_7)
+        self.gridLayout.addWidget(self.label_7, 6, 3, 1, 1)
 
-        self.label_6 = QLabel(self.menu_slider)
+        self.label_3 = QLabel(self.main_menu_con)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setFont(font4)
+
+        self.gridLayout.addWidget(self.label_3, 1, 3, 1, 1)
+
+        self.label_5 = QLabel(self.main_menu_con)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setFont(font4)
+
+        self.gridLayout.addWidget(self.label_5, 3, 3, 1, 1)
+
+        self.harddrive_button = QPushButton(self.main_menu_con)
+        self.harddrive_button.setObjectName(u"harddrive_button")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.harddrive_button.sizePolicy().hasHeightForWidth())
+        self.harddrive_button.setSizePolicy(sizePolicy2)
+        self.harddrive_button.setMinimumSize(QSize(40, 0))
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/assets/icons/out/database.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.harddrive_button.setIcon(icon4)
+        self.harddrive_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.harddrive_button, 5, 2, 1, 1)
+
+        self.cpu_button = QPushButton(self.main_menu_con)
+        self.cpu_button.setObjectName(u"cpu_button")
+        sizePolicy2.setHeightForWidth(self.cpu_button.sizePolicy().hasHeightForWidth())
+        self.cpu_button.setSizePolicy(sizePolicy2)
+        self.cpu_button.setMinimumSize(QSize(40, 0))
+        icon5 = QIcon()
+        icon5.addFile(u":/icons_svg/assets/icons/svg/cpu.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.cpu_button.setIcon(icon5)
+        self.cpu_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.cpu_button, 0, 2, 1, 1)
+
+        self.display_button = QPushButton(self.main_menu_con)
+        self.display_button.setObjectName(u"display_button")
+        self.display_button.setMinimumSize(QSize(40, 0))
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/assets/icons/out/monitor.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.display_button.setIcon(icon6)
+        self.display_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.display_button, 3, 2, 1, 1)
+
+        self.label_8 = QLabel(self.main_menu_con)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setFont(font4)
+        self.label_8.setWordWrap(False)
+
+        self.gridLayout.addWidget(self.label_8, 0, 3, 1, 1, Qt.AlignVCenter)
+
+        self.network_button = QPushButton(self.main_menu_con)
+        self.network_button.setObjectName(u"network_button")
+        self.network_button.setMinimumSize(QSize(40, 0))
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/assets/icons/out/wifi.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.network_button.setIcon(icon7)
+        self.network_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.network_button, 1, 2, 1, 1)
+
+        self.resource_button = QPushButton(self.main_menu_con)
+        self.resource_button.setObjectName(u"resource_button")
+        self.resource_button.setMinimumSize(QSize(40, 0))
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/assets/icons/out/activity.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.resource_button.setIcon(icon8)
+        self.resource_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.resource_button, 2, 2, 1, 1)
+
+        self.label_4 = QLabel(self.main_menu_con)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setFont(font4)
+
+        self.gridLayout.addWidget(self.label_4, 2, 3, 1, 1)
+
+        self.power_button = QPushButton(self.main_menu_con)
+        self.power_button.setObjectName(u"power_button")
+        sizePolicy2.setHeightForWidth(self.power_button.sizePolicy().hasHeightForWidth())
+        self.power_button.setSizePolicy(sizePolicy2)
+        self.power_button.setMinimumSize(QSize(40, 0))
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/assets/icons/out/battery-charging.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.power_button.setIcon(icon9)
+        self.power_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.power_button, 6, 2, 1, 1)
+
+        self.label_6 = QLabel(self.main_menu_con)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setMinimumSize(QSize(0, 0))
-        self.label_6.setMaximumSize(QSize(16777215, 16777215))
-        self.label_6.setSizeIncrement(QSize(200, 200))
-        self.label_6.setBaseSize(QSize(200, 200))
-        self.label_6.setFont(font7)
-        self.label_6.setScaledContents(False)
+        self.label_6.setFont(font4)
 
-        self.verticalLayout_19.addWidget(self.label_6)
-
-        self.label_10 = QLabel(self.menu_slider)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setMinimumSize(QSize(0, 0))
-        self.label_10.setMaximumSize(QSize(16777215, 16777215))
-        self.label_10.setSizeIncrement(QSize(0, 0))
-        self.label_10.setBaseSize(QSize(200, 200))
-        self.label_10.setFont(font7)
-        self.label_10.setMidLineWidth(-1)
-        self.label_10.setScaledContents(False)
-
-        self.verticalLayout_19.addWidget(self.label_10)
+        self.gridLayout.addWidget(self.label_6, 5, 3, 1, 1)
 
 
-        self.horizontalLayout_8.addWidget(self.menu_slider, 0, Qt.AlignLeft|Qt.AlignTop)
-
-
-        self.horizontalLayout_7.addWidget(self.main_menu_con, 0, Qt.AlignLeft)
+        self.horizontalLayout_7.addWidget(self.main_menu_con)
 
         self.main_content = QFrame(self.main_frame)
         self.main_content.setObjectName(u"main_content")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.main_content.sizePolicy().hasHeightForWidth())
-        self.main_content.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.main_content.sizePolicy().hasHeightForWidth())
+        self.main_content.setSizePolicy(sizePolicy1)
         self.main_content.setFrameShape(QFrame.StyledPanel)
         self.main_content.setFrameShadow(QFrame.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.main_content)
@@ -374,30 +311,121 @@ class Ui_MainWindow(object):
         self.stackedWidget = QStackedWidget(self.main_content)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setStyleSheet(u"color: rgb(153, 193, 241);")
+        self.projects_site = QWidget()
+        self.projects_site.setObjectName(u"projects_site")
+        self.horizontalLayout_8 = QHBoxLayout(self.projects_site)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.frame_11 = QFrame(self.projects_site)
+        self.frame_11.setObjectName(u"frame_11")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
+        self.frame_11.setSizePolicy(sizePolicy3)
+        self.frame_11.setFrameShape(QFrame.StyledPanel)
+        self.frame_11.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_19 = QVBoxLayout(self.frame_11)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.label_15 = QLabel(self.frame_11)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setMaximumSize(QSize(220, 180))
+        self.label_15.setPixmap(QPixmap(u":/img/0x41.png"))
+        self.label_15.setScaledContents(True)
+
+        self.verticalLayout_19.addWidget(self.label_15, 0, Qt.AlignHCenter)
+
+        self.label_16 = QLabel(self.frame_11)
+        self.label_16.setObjectName(u"label_16")
+        self.label_16.setStyleSheet(u"font: 700 11pt \"System-ui\";")
+        self.label_16.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+
+        self.verticalLayout_19.addWidget(self.label_16, 0, Qt.AlignTop)
+
+        self.label_9 = QLabel(self.frame_11)
+        self.label_9.setObjectName(u"label_9")
+        sizePolicy.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
+        self.label_9.setSizePolicy(sizePolicy)
+        self.label_9.setAlignment(Qt.AlignCenter)
+        self.label_9.setWordWrap(True)
+
+        self.verticalLayout_19.addWidget(self.label_9)
+
+        self.hackzor_btn = QPushButton(self.frame_11)
+        self.hackzor_btn.setObjectName(u"hackzor_btn")
+
+        self.verticalLayout_19.addWidget(self.hackzor_btn)
+
+
+        self.horizontalLayout_8.addWidget(self.frame_11)
+
+        self.frame_12 = QFrame(self.projects_site)
+        self.frame_12.setObjectName(u"frame_12")
+        sizePolicy3.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
+        self.frame_12.setSizePolicy(sizePolicy3)
+        self.frame_12.setFrameShape(QFrame.StyledPanel)
+        self.frame_12.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_20 = QVBoxLayout(self.frame_12)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.label_12 = QLabel(self.frame_12)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setMaximumSize(QSize(200, 180))
+        self.label_12.setTextFormat(Qt.PlainText)
+        self.label_12.setPixmap(QPixmap(u":/img/game_logo_colored.png"))
+        self.label_12.setScaledContents(True)
+        self.label_12.setWordWrap(True)
+        self.label_12.setMargin(20)
+
+        self.verticalLayout_20.addWidget(self.label_12, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.label_21 = QLabel(self.frame_12)
+        self.label_21.setObjectName(u"label_21")
+        self.label_21.setStyleSheet(u"font: 700 11pt \"System-ui\";")
+        self.label_21.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+
+        self.verticalLayout_20.addWidget(self.label_21, 0, Qt.AlignTop)
+
+        self.label_10 = QLabel(self.frame_12)
+        self.label_10.setObjectName(u"label_10")
+        sizePolicy.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
+        self.label_10.setSizePolicy(sizePolicy)
+        self.label_10.setAlignment(Qt.AlignCenter)
+        self.label_10.setWordWrap(True)
+
+        self.verticalLayout_20.addWidget(self.label_10)
+
+        self.foxtale_btn = QPushButton(self.frame_12)
+        self.foxtale_btn.setObjectName(u"foxtale_btn")
+
+        self.verticalLayout_20.addWidget(self.foxtale_btn)
+
+
+        self.horizontalLayout_8.addWidget(self.frame_12)
+
+        self.stackedWidget.addWidget(self.projects_site)
         self.cpu_memory = QWidget()
         self.cpu_memory.setObjectName(u"cpu_memory")
         self.verticalLayout_5 = QVBoxLayout(self.cpu_memory)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.label_35 = QLabel(self.cpu_memory)
         self.label_35.setObjectName(u"label_35")
-        font8 = QFont()
-        font8.setPointSize(16)
-        font8.setBold(True)
-        font8.setItalic(True)
-        self.label_35.setFont(font8)
+        font5 = QFont()
+        font5.setPointSize(16)
+        font5.setBold(True)
+        font5.setItalic(True)
+        self.label_35.setFont(font5)
 
         self.verticalLayout_5.addWidget(self.label_35)
 
         self.cpu_info_frame = QFrame(self.cpu_memory)
         self.cpu_info_frame.setObjectName(u"cpu_info_frame")
-        sizePolicy2.setHeightForWidth(self.cpu_info_frame.sizePolicy().hasHeightForWidth())
-        self.cpu_info_frame.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.cpu_info_frame.sizePolicy().hasHeightForWidth())
+        self.cpu_info_frame.setSizePolicy(sizePolicy3)
         self.cpu_info_frame.setFrameShape(QFrame.StyledPanel)
         self.cpu_info_frame.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.cpu_info_frame)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setHorizontalSpacing(50)
-        self.gridLayout_2.setVerticalSpacing(0)
+        self.gridLayout_2.setVerticalSpacing(20)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.cpu_per_bar = QProgressBar(self.cpu_info_frame)
         self.cpu_per_bar.setObjectName(u"cpu_per_bar")
@@ -407,7 +435,7 @@ class Ui_MainWindow(object):
 
         self.label_13 = QLabel(self.cpu_info_frame)
         self.label_13.setObjectName(u"label_13")
-        self.label_13.setFont(font6)
+        self.label_13.setFont(font4)
 
         self.gridLayout_2.addWidget(self.label_13, 9, 0, 1, 1, Qt.AlignBottom)
 
@@ -424,7 +452,7 @@ class Ui_MainWindow(object):
 
         self.label_14 = QLabel(self.cpu_info_frame)
         self.label_14.setObjectName(u"label_14")
-        self.label_14.setFont(font6)
+        self.label_14.setFont(font4)
 
         self.gridLayout_2.addWidget(self.label_14, 8, 0, 1, 1)
 
@@ -440,7 +468,7 @@ class Ui_MainWindow(object):
 
         self.label_11 = QLabel(self.cpu_info_frame)
         self.label_11.setObjectName(u"label_11")
-        self.label_11.setFont(font6)
+        self.label_11.setFont(font4)
 
         self.gridLayout_2.addWidget(self.label_11, 7, 0, 1, 1, Qt.AlignBottom)
 
@@ -467,13 +495,13 @@ class Ui_MainWindow(object):
 
         self.label_17 = QLabel(self.ram_frame)
         self.label_17.setObjectName(u"label_17")
-        self.label_17.setFont(font6)
+        self.label_17.setFont(font4)
 
         self.gridLayout_3.addWidget(self.label_17, 0, 0, 1, 1)
 
         self.label_20 = QLabel(self.ram_frame)
         self.label_20.setObjectName(u"label_20")
-        self.label_20.setFont(font6)
+        self.label_20.setFont(font4)
 
         self.gridLayout_3.addWidget(self.label_20, 3, 0, 1, 1)
 
@@ -489,19 +517,19 @@ class Ui_MainWindow(object):
 
         self.label_18 = QLabel(self.ram_frame)
         self.label_18.setObjectName(u"label_18")
-        self.label_18.setFont(font6)
+        self.label_18.setFont(font4)
 
         self.gridLayout_3.addWidget(self.label_18, 1, 0, 1, 1)
 
         self.label_25 = QLabel(self.ram_frame)
         self.label_25.setObjectName(u"label_25")
-        self.label_25.setFont(font6)
+        self.label_25.setFont(font4)
 
         self.gridLayout_3.addWidget(self.label_25, 4, 0, 1, 1)
 
         self.label_19 = QLabel(self.ram_frame)
         self.label_19.setObjectName(u"label_19")
-        self.label_19.setFont(font6)
+        self.label_19.setFont(font4)
 
         self.gridLayout_3.addWidget(self.label_19, 2, 0, 1, 1)
 
@@ -546,8 +574,8 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.cpu_memory)
         self.battery_frame = QWidget()
         self.battery_frame.setObjectName(u"battery_frame")
-        sizePolicy1.setHeightForWidth(self.battery_frame.sizePolicy().hasHeightForWidth())
-        self.battery_frame.setSizePolicy(sizePolicy1)
+        sizePolicy3.setHeightForWidth(self.battery_frame.sizePolicy().hasHeightForWidth())
+        self.battery_frame.setSizePolicy(sizePolicy3)
         self.battery_frame.setMinimumSize(QSize(727, 0))
         self.verticalLayout_6 = QVBoxLayout(self.battery_frame)
         self.verticalLayout_6.setSpacing(0)
@@ -555,9 +583,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.setContentsMargins(5, 2, 5, 2)
         self.label_36 = QLabel(self.battery_frame)
         self.label_36.setObjectName(u"label_36")
-        self.label_36.setFont(font8)
+        self.label_36.setFont(font5)
 
-        self.verticalLayout_6.addWidget(self.label_36, 0, Qt.AlignVCenter)
+        self.verticalLayout_6.addWidget(self.label_36)
 
         self.battery_info = QFrame(self.battery_frame)
         self.battery_info.setObjectName(u"battery_info")
@@ -583,10 +611,10 @@ class Ui_MainWindow(object):
 
         self.label_27 = QLabel(self.battery_info)
         self.label_27.setObjectName(u"label_27")
-        font9 = QFont()
-        font9.setPointSize(10)
-        font9.setBold(True)
-        self.label_27.setFont(font9)
+        font6 = QFont()
+        font6.setPointSize(10)
+        font6.setBold(True)
+        self.label_27.setFont(font6)
 
         self.gridLayout_4.addWidget(self.label_27, 6, 0, 1, 1)
 
@@ -598,13 +626,13 @@ class Ui_MainWindow(object):
 
         self.label_28 = QLabel(self.battery_info)
         self.label_28.setObjectName(u"label_28")
-        self.label_28.setFont(font9)
+        self.label_28.setFont(font6)
 
         self.gridLayout_4.addWidget(self.label_28, 4, 0, 1, 1)
 
         self.label_29 = QLabel(self.battery_info)
         self.label_29.setObjectName(u"label_29")
-        self.label_29.setFont(font9)
+        self.label_29.setFont(font6)
 
         self.gridLayout_4.addWidget(self.label_29, 7, 0, 1, 1)
 
@@ -616,7 +644,7 @@ class Ui_MainWindow(object):
 
         self.label_30 = QLabel(self.battery_info)
         self.label_30.setObjectName(u"label_30")
-        self.label_30.setFont(font9)
+        self.label_30.setFont(font6)
 
         self.gridLayout_4.addWidget(self.label_30, 5, 0, 1, 1, Qt.AlignTop)
 
@@ -642,9 +670,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.label_51 = QLabel(self.harddrive)
         self.label_51.setObjectName(u"label_51")
-        self.label_51.setFont(font8)
+        self.label_51.setFont(font5)
 
-        self.verticalLayout_10.addWidget(self.label_51, 0, Qt.AlignVCenter)
+        self.verticalLayout_10.addWidget(self.label_51)
 
         self.storageTable = QTableWidget(self.harddrive)
         if (self.storageTable.columnCount() < 8):
@@ -666,22 +694,29 @@ class Ui_MainWindow(object):
         __qtablewidgetitem7 = QTableWidgetItem()
         self.storageTable.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         self.storageTable.setObjectName(u"storageTable")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.storageTable.sizePolicy().hasHeightForWidth())
+        self.storageTable.setSizePolicy(sizePolicy4)
 
-        self.verticalLayout_10.addWidget(self.storageTable)
+        self.verticalLayout_10.addWidget(self.storageTable, 0, Qt.AlignTop)
 
         self.stackedWidget.addWidget(self.harddrive)
         self.system_monitor = QWidget()
         self.system_monitor.setObjectName(u"system_monitor")
+        sizePolicy4.setHeightForWidth(self.system_monitor.sizePolicy().hasHeightForWidth())
+        self.system_monitor.setSizePolicy(sizePolicy4)
         self.verticalLayout_7 = QVBoxLayout(self.system_monitor)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.label_41 = QLabel(self.system_monitor)
         self.label_41.setObjectName(u"label_41")
-        font10 = QFont()
-        font10.setFamilies([u"Cantarell"])
-        font10.setPointSize(16)
-        font10.setBold(True)
-        font10.setItalic(True)
-        self.label_41.setFont(font10)
+        font7 = QFont()
+        font7.setFamilies([u"Cantarell"])
+        font7.setPointSize(16)
+        font7.setBold(True)
+        font7.setItalic(True)
+        self.label_41.setFont(font7)
         self.label_41.setStyleSheet(u"color: rgb(153, 193, 241);")
 
         self.verticalLayout_7.addWidget(self.label_41)
@@ -692,30 +727,6 @@ class Ui_MainWindow(object):
         self.system_info.setFrameShadow(QFrame.Raised)
         self.gridLayout_5 = QGridLayout(self.system_info)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.label_46 = QLabel(self.system_info)
-        self.label_46.setObjectName(u"label_46")
-        self.label_46.setFont(font9)
-
-        self.gridLayout_5.addWidget(self.label_46, 2, 3, 1, 1)
-
-        self.label_49 = QLabel(self.system_info)
-        self.label_49.setObjectName(u"label_49")
-        self.label_49.setFont(font9)
-
-        self.gridLayout_5.addWidget(self.label_49, 3, 3, 1, 1)
-
-        self.sytem_date_text = QLabel(self.system_info)
-        self.sytem_date_text.setObjectName(u"sytem_date_text")
-        self.sytem_date_text.setFont(font1)
-
-        self.gridLayout_5.addWidget(self.sytem_date_text, 3, 2, 1, 1)
-
-        self.label_47 = QLabel(self.system_info)
-        self.label_47.setObjectName(u"label_47")
-        self.label_47.setFont(font9)
-
-        self.gridLayout_5.addWidget(self.label_47, 1, 3, 1, 1)
-
         self.system_machine_text = QLabel(self.system_info)
         self.system_machine_text.setObjectName(u"system_machine_text")
         self.system_machine_text.setFont(font1)
@@ -724,39 +735,9 @@ class Ui_MainWindow(object):
 
         self.label_37 = QLabel(self.system_info)
         self.label_37.setObjectName(u"label_37")
-        self.label_37.setFont(font9)
+        self.label_37.setFont(font6)
 
         self.gridLayout_5.addWidget(self.label_37, 3, 1, 1, 1)
-
-        self.label_39 = QLabel(self.system_info)
-        self.label_39.setObjectName(u"label_39")
-        self.label_39.setFont(font9)
-
-        self.gridLayout_5.addWidget(self.label_39, 1, 1, 1, 1)
-
-        self.system_plattform_text = QLabel(self.system_info)
-        self.system_plattform_text.setObjectName(u"system_plattform_text")
-        self.system_plattform_text.setFont(font1)
-
-        self.gridLayout_5.addWidget(self.system_plattform_text, 1, 2, 1, 1)
-
-        self.label_38 = QLabel(self.system_info)
-        self.label_38.setObjectName(u"label_38")
-        self.label_38.setFont(font9)
-
-        self.gridLayout_5.addWidget(self.label_38, 2, 1, 1, 1)
-
-        self.system_cpu_text = QLabel(self.system_info)
-        self.system_cpu_text.setObjectName(u"system_cpu_text")
-        self.system_cpu_text.setFont(font1)
-
-        self.gridLayout_5.addWidget(self.system_cpu_text, 1, 4, 1, 1)
-
-        self.system_version_text = QLabel(self.system_info)
-        self.system_version_text.setObjectName(u"system_version_text")
-        self.system_version_text.setFont(font1)
-
-        self.gridLayout_5.addWidget(self.system_version_text, 2, 2, 1, 1)
 
         self.sytem_time_text = QLabel(self.system_info)
         self.sytem_time_text.setObjectName(u"sytem_time_text")
@@ -764,11 +745,65 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5.addWidget(self.sytem_time_text, 3, 4, 1, 1)
 
+        self.sytem_date_text = QLabel(self.system_info)
+        self.sytem_date_text.setObjectName(u"sytem_date_text")
+        self.sytem_date_text.setFont(font1)
+
+        self.gridLayout_5.addWidget(self.sytem_date_text, 3, 2, 1, 1)
+
+        self.system_cpu_text = QLabel(self.system_info)
+        self.system_cpu_text.setObjectName(u"system_cpu_text")
+        self.system_cpu_text.setFont(font1)
+
+        self.gridLayout_5.addWidget(self.system_cpu_text, 1, 4, 1, 1)
+
         self.system_os_text = QLabel(self.system_info)
         self.system_os_text.setObjectName(u"system_os_text")
-        self.system_os_text.setFont(font9)
+        self.system_os_text.setFont(font6)
 
         self.gridLayout_5.addWidget(self.system_os_text, 0, 1, 1, 1)
+
+        self.label_47 = QLabel(self.system_info)
+        self.label_47.setObjectName(u"label_47")
+        self.label_47.setFont(font6)
+
+        self.gridLayout_5.addWidget(self.label_47, 1, 3, 1, 1)
+
+        self.label_49 = QLabel(self.system_info)
+        self.label_49.setObjectName(u"label_49")
+        self.label_49.setFont(font6)
+
+        self.gridLayout_5.addWidget(self.label_49, 3, 3, 1, 1)
+
+        self.system_version_text = QLabel(self.system_info)
+        self.system_version_text.setObjectName(u"system_version_text")
+        self.system_version_text.setFont(font1)
+
+        self.gridLayout_5.addWidget(self.system_version_text, 2, 2, 1, 1)
+
+        self.label_38 = QLabel(self.system_info)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setFont(font6)
+
+        self.gridLayout_5.addWidget(self.label_38, 2, 1, 1, 1)
+
+        self.label_39 = QLabel(self.system_info)
+        self.label_39.setObjectName(u"label_39")
+        self.label_39.setFont(font6)
+
+        self.gridLayout_5.addWidget(self.label_39, 1, 1, 1, 1)
+
+        self.label_46 = QLabel(self.system_info)
+        self.label_46.setObjectName(u"label_46")
+        self.label_46.setFont(font6)
+
+        self.gridLayout_5.addWidget(self.label_46, 2, 3, 1, 1)
+
+        self.system_plattform_text = QLabel(self.system_info)
+        self.system_plattform_text.setObjectName(u"system_plattform_text")
+        self.system_plattform_text.setFont(font1)
+
+        self.gridLayout_5.addWidget(self.system_plattform_text, 1, 2, 1, 1)
 
 
         self.verticalLayout_7.addWidget(self.system_info)
@@ -789,9 +824,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.label_50 = QLabel(self.frame_2)
         self.label_50.setObjectName(u"label_50")
-        self.label_50.setFont(font8)
+        self.label_50.setFont(font5)
 
-        self.horizontalLayout_10.addWidget(self.label_50)
+        self.horizontalLayout_10.addWidget(self.label_50, 0, Qt.AlignBottom)
 
         self.frame_4 = QFrame(self.frame_2)
         self.frame_4.setObjectName(u"frame_4")
@@ -804,7 +839,8 @@ class Ui_MainWindow(object):
         self.activity_search = QLineEdit(self.frame_4)
         self.activity_search.setObjectName(u"activity_search")
         self.activity_search.setMinimumSize(QSize(300, 0))
-        self.activity_search.setStyleSheet(u"background: #fff;")
+        self.activity_search.setStyleSheet(u"background-color: rgb(26, 95, 180);\n"
+"color: rgb(192, 191, 188);")
         self.activity_search.setCursorPosition(0)
         self.activity_search.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
@@ -812,10 +848,10 @@ class Ui_MainWindow(object):
 
         self.searchbutton = QPushButton(self.frame_4)
         self.searchbutton.setObjectName(u"searchbutton")
-        font11 = QFont()
-        font11.setPointSize(12)
-        font11.setBold(False)
-        self.searchbutton.setFont(font11)
+        font8 = QFont()
+        font8.setPointSize(12)
+        font8.setBold(False)
+        self.searchbutton.setFont(font8)
         icon10 = QIcon()
         icon10.addFile(u":/icons_svg/assets/icons/svg/search.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.searchbutton.setIcon(icon10)
@@ -824,15 +860,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.addWidget(self.searchbutton)
 
 
-        self.horizontalLayout_10.addWidget(self.frame_4, 0, Qt.AlignRight)
+        self.horizontalLayout_10.addWidget(self.frame_4, 0, Qt.AlignRight|Qt.AlignBottom)
 
 
-        self.verticalLayout_8.addWidget(self.frame_2)
+        self.verticalLayout_8.addWidget(self.frame_2, 0, Qt.AlignTop)
 
         self.frame = QFrame(self.activities)
         self.frame.setObjectName(u"frame")
-        sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
-        self.frame.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy1)
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_9 = QVBoxLayout(self.frame)
@@ -858,7 +894,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem15)
         self.tableWidget.setObjectName(u"tableWidget")
 
-        self.verticalLayout_9.addWidget(self.tableWidget)
+        self.verticalLayout_9.addWidget(self.tableWidget, 0, Qt.AlignTop)
 
 
         self.verticalLayout_8.addWidget(self.frame)
@@ -873,7 +909,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.pushButton_3 = QPushButton(self.frame_3)
         self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setFont(font9)
+        self.pushButton_3.setFont(font6)
         self.pushButton_3.setStyleSheet(u"\n"
 "color: rgb(0, 255, 255);")
 
@@ -881,7 +917,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_4 = QPushButton(self.frame_3)
         self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setFont(font9)
+        self.pushButton_4.setFont(font6)
         self.pushButton_4.setStyleSheet(u"\n"
 "color: rgb(0, 255, 255);")
 
@@ -889,7 +925,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_5 = QPushButton(self.frame_3)
         self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setFont(font9)
+        self.pushButton_5.setFont(font6)
         self.pushButton_5.setStyleSheet(u"\n"
 "color: rgb(0, 255, 255);")
 
@@ -897,7 +933,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_6 = QPushButton(self.frame_3)
         self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setFont(font9)
+        self.pushButton_6.setFont(font6)
         self.pushButton_6.setStyleSheet(u"\n"
 "color: rgb(0, 255, 255);")
 
@@ -909,6 +945,8 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.activities)
         self.networks = QWidget()
         self.networks.setObjectName(u"networks")
+        sizePolicy4.setHeightForWidth(self.networks.sizePolicy().hasHeightForWidth())
+        self.networks.setSizePolicy(sizePolicy4)
         self.verticalLayout_12 = QVBoxLayout(self.networks)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.scrollArea = QScrollArea(self.networks)
@@ -916,7 +954,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 706, 458))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 722, 458))
         self.verticalLayout_13 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_13.setSpacing(20)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
@@ -931,7 +969,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.label_57 = QLabel(self.frame_9)
         self.label_57.setObjectName(u"label_57")
-        self.label_57.setFont(font10)
+        self.label_57.setFont(font7)
 
         self.verticalLayout_18.addWidget(self.label_57, 0, Qt.AlignLeft|Qt.AlignVCenter)
 
@@ -1113,8 +1151,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(5, 0, 5, 0)
         self.label = QLabel(self.rightfram)
         self.label.setObjectName(u"label")
-        sizePolicy2.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy1)
         self.label.setMinimumSize(QSize(20, 20))
         self.label.setMaximumSize(QSize(16777215, 16777215))
         palette = QPalette()
@@ -1150,13 +1188,13 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush)
 #endif
         self.label.setPalette(palette)
-        font12 = QFont()
-        font12.setFamilies([u"a Another Tag"])
-        font12.setPointSize(40)
-        font12.setBold(False)
-        font12.setItalic(False)
-        font12.setUnderline(False)
-        self.label.setFont(font12)
+        font9 = QFont()
+        font9.setFamilies([u"a Another Tag"])
+        font9.setPointSize(40)
+        font9.setBold(False)
+        font9.setItalic(False)
+        font9.setUnderline(False)
+        self.label.setFont(font9)
         self.label.setStyleSheet(u"font: 40pt \"a Another Tag\";\n"
 "color: rgb(2, 17, 31);")
         self.label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -1169,26 +1207,27 @@ class Ui_MainWindow(object):
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
         self.verticalLayout_11 = QVBoxLayout(self.frame_10)
-        self.verticalLayout_11.setSpacing(0)
+        self.verticalLayout_11.setSpacing(7)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_11.setContentsMargins(5, 0, 0, 0)
         self.git_btn = QPushButton(self.frame_10)
-        self.buttonGroup = QButtonGroup(MainWindow)
-        self.buttonGroup.setObjectName(u"buttonGroup")
-        self.buttonGroup.addButton(self.git_btn)
         self.git_btn.setObjectName(u"git_btn")
-        self.git_btn.setFont(font6)
+        self.git_btn.setFont(font4)
+        self.git_btn.setStyleSheet(u"QPushButton:hover{\n"
+"	border: 1px solid;\n"
+"	border-bottom:2px solid;\n"
+"	border-radius: 25px;\n"
+"}")
         icon11 = QIcon()
         icon11.addFile(u":/icons_svg/assets/icons/svg/github.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.git_btn.setIcon(icon11)
         self.git_btn.setIconSize(QSize(20, 20))
 
-        self.verticalLayout_11.addWidget(self.git_btn, 0, Qt.AlignLeft)
+        self.verticalLayout_11.addWidget(self.git_btn, 0, Qt.AlignLeft|Qt.AlignVCenter)
 
         self.codepen_btn = QPushButton(self.frame_10)
-        self.buttonGroup.addButton(self.codepen_btn)
         self.codepen_btn.setObjectName(u"codepen_btn")
-        self.codepen_btn.setFont(font6)
+        self.codepen_btn.setFont(font4)
         icon12 = QIcon()
         icon12.addFile(u":/icons_svg/assets/icons/svg/codepen.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.codepen_btn.setIcon(icon12)
@@ -1197,29 +1236,38 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.addWidget(self.codepen_btn, 0, Qt.AlignLeft)
 
         self.yt_btn = QPushButton(self.frame_10)
-        self.buttonGroup.addButton(self.yt_btn)
         self.yt_btn.setObjectName(u"yt_btn")
-        self.yt_btn.setFont(font6)
+        self.yt_btn.setFont(font4)
         icon13 = QIcon()
         icon13.addFile(u":/icons_svg/assets/icons/svg/youtube.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.yt_btn.setIcon(icon13)
         self.yt_btn.setIconSize(QSize(20, 20))
 
-        self.verticalLayout_11.addWidget(self.yt_btn, 0, Qt.AlignLeft)
+        self.verticalLayout_11.addWidget(self.yt_btn)
+
+        self.project_btn = QPushButton(self.frame_10)
+        self.project_btn.setObjectName(u"project_btn")
+        self.project_btn.setFont(font4)
+        icon14 = QIcon()
+        icon14.addFile(u":/icons/assets/icons/out/box.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.project_btn.setIcon(icon14)
+        self.project_btn.setIconSize(QSize(20, 20))
+
+        self.verticalLayout_11.addWidget(self.project_btn)
 
 
-        self.verticalLayout_3.addWidget(self.frame_10, 0, Qt.AlignLeft)
+        self.verticalLayout_3.addWidget(self.frame_10, 0, Qt.AlignLeft|Qt.AlignVCenter)
 
         self.label_2 = QLabel(self.rightfram)
         self.label_2.setObjectName(u"label_2")
-        sizePolicy1.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy1)
-        font13 = QFont()
-        font13.setFamilies([u"FontAwesome"])
-        font13.setPointSize(11)
-        font13.setBold(True)
-        font13.setItalic(True)
-        self.label_2.setFont(font13)
+        sizePolicy3.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy3)
+        font10 = QFont()
+        font10.setFamilies([u"FontAwesome"])
+        font10.setPointSize(11)
+        font10.setBold(True)
+        font10.setItalic(True)
+        self.label_2.setFont(font10)
         self.label_2.setLayoutDirection(Qt.LeftToRight)
         self.label_2.setStyleSheet(u"color: rgb(212, 212, 212);\n"
 "font: 700 italic 11pt \"FontAwesome\";")
@@ -1257,12 +1305,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(10, 0, 0, 0)
         self.footer_text = QLabel(self.footer_left_frame)
         self.footer_text.setObjectName(u"footer_text")
-        font14 = QFont()
-        font14.setFamilies([u"Bitstream Vera Sans"])
-        font14.setPointSize(10)
-        font14.setBold(True)
-        font14.setItalic(True)
-        self.footer_text.setFont(font14)
+        font11 = QFont()
+        font11.setFamilies([u"Bitstream Vera Sans"])
+        font11.setPointSize(10)
+        font11.setBold(True)
+        font11.setItalic(True)
+        self.footer_text.setFont(font11)
         self.footer_text.setStyleSheet(u"color: rgb(61, 56, 70);")
         self.footer_text.setMargin(10)
 
@@ -1279,9 +1327,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.footer_help_btn = QPushButton(self.footer_right_frame)
         self.footer_help_btn.setObjectName(u"footer_help_btn")
-        icon14 = QIcon()
-        icon14.addFile(u":/icons/assets/icons/out/help-circle.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.footer_help_btn.setIcon(icon14)
+        icon15 = QIcon()
+        icon15.addFile(u":/icons/assets/icons/out/help-circle.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.footer_help_btn.setIcon(icon15)
         self.footer_help_btn.setIconSize(QSize(28, 28))
 
         self.horizontalLayout_6.addWidget(self.footer_help_btn, 0, Qt.AlignRight|Qt.AlignBottom)
@@ -1303,7 +1351,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1317,19 +1365,29 @@ class Ui_MainWindow(object):
         self.minimize_window_btn.setText("")
         self.maximize_window_btn.setText("")
         self.close_window_btn.setText("")
-        self.cpu_button.setText("")
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Battery", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Network", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"System", None))
         self.harddrive_button.setText("")
-        self.power_button.setText("")
-        self.resource_button.setText("")
+        self.cpu_button.setText("")
         self.display_button.setText("")
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"CPU", None))
         self.network_button.setText("")
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"CPU", None))
-        self.label_58.setText(QCoreApplication.translate("MainWindow", u"CPU", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Storage", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Battery", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Tasks", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"System", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Network", None))
+        self.resource_button.setText("")
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Tasks", None))
+        self.power_button.setText("")
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Storage", None))
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"0x41 H4CKZ0R", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"How can I become a hacker.\n"
+"In this short tutorial I will show you a way to learn how to hack. All lessons are written very simply so that even complete laymen can get started. The lessons are only available in German.", None))
+        self.hackzor_btn.setText(QCoreApplication.translate("MainWindow", u"H4CKZ0R", None))
+        self.label_12.setText("")
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"A Fox Tale", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"A 2D pixel art single player role playing game.\n"
+"The project is developed with C# and the Unity engine.\n"
+"The game is a homage to the old SNES role playing games.\n"
+"like 'Secret of Mana' or 'Terranigma'. ", None))
+        self.foxtale_btn.setText(QCoreApplication.translate("MainWindow", u"A FOX TALE", None))
         self.label_35.setText(QCoreApplication.translate("MainWindow", u"CPU and Memory", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"CPU MAIN", None))
         self.cpu_per_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
@@ -1356,7 +1414,7 @@ class Ui_MainWindow(object):
         self.label_30.setText(QCoreApplication.translate("MainWindow", u"Plugged In", None))
         self.bat_status_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.bat_plug_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
-        self.label_51.setText(QCoreApplication.translate("MainWindow", u"STORAGE", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"Storage", None))
         ___qtablewidgetitem = self.storageTable.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Device", None));
         ___qtablewidgetitem1 = self.storageTable.horizontalHeaderItem(1)
@@ -1374,19 +1432,19 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem7 = self.storageTable.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Free Storage", None));
         self.label_41.setText(QCoreApplication.translate("MainWindow", u"System Information", None))
-        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Machine", None))
-        self.label_49.setText(QCoreApplication.translate("MainWindow", u"System Time", None))
-        self.sytem_date_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
-        self.label_47.setText(QCoreApplication.translate("MainWindow", u"Processor", None))
         self.system_machine_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.label_37.setText(QCoreApplication.translate("MainWindow", u"System Date", None))
-        self.label_39.setText(QCoreApplication.translate("MainWindow", u"Plattform", None))
-        self.system_plattform_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
-        self.label_38.setText(QCoreApplication.translate("MainWindow", u"Version", None))
-        self.system_cpu_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
-        self.system_version_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.sytem_time_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.sytem_date_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.system_cpu_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.system_os_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.label_47.setText(QCoreApplication.translate("MainWindow", u"Processor", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"System Time", None))
+        self.system_version_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"Version", None))
+        self.label_39.setText(QCoreApplication.translate("MainWindow", u"Plattform", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Machine", None))
+        self.system_plattform_text.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.label_50.setText(QCoreApplication.translate("MainWindow", u"Activies", None))
         self.activity_search.setInputMask("")
         self.activity_search.setText("")
@@ -1475,6 +1533,7 @@ class Ui_MainWindow(object):
         self.git_btn.setText(QCoreApplication.translate("MainWindow", u"GITHUB", None))
         self.codepen_btn.setText(QCoreApplication.translate("MainWindow", u"CODEPEN", None))
         self.yt_btn.setText(QCoreApplication.translate("MainWindow", u"YOUTUBE", None))
+        self.project_btn.setText(QCoreApplication.translate("MainWindow", u"PROJECTS", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>App<br/>Designed And<br/>Developed By<br>&#169; S3R43o3</p></body></html>", None))
         self.footer_text.setText(QCoreApplication.translate("MainWindow", u"Version 0.8.4 | all Rights reserved 2021 - 2022 \u00a9 S3R43o3", None))
         self.footer_help_btn.setText("")
