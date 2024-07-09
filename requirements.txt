@@ -29,4 +29,4 @@ qt6-applications==6.1.0.2.2
 qt6-tools==6.1.0.1.2
 shiboken2==5.15.2.1
 shiboken6==6.2.3
-zipp==3.7.0
+zipp==3.19.1
